@@ -1,0 +1,237 @@
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-track{
+    /* el inset es para que el sombreado este dentro del scroll bar */
+    box-shadow: inset 0 0 5px green;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: royalblue;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+ background-color: rgb(38, 61, 128);
+}
+
+
+.container-principal{
+    display: flex;
+    margin: 0px 4vh;
+}
+
+.container--navbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar-principal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-self: center;
+    
+}
+
+.nav-config{
+     flex-direction: row-reverse;
+
+}
+
+.navbar--nav{
+    display: flex;
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(238, 164, 164);
+    transition-property: color;
+    transition-duration: .7s;
+}
+
+
+.navbar--nav:hover{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+.logo{
+    display: flex;
+    justify-self: flex-start;
+}
+
+
+/*  ------------------------para el carrousel de fotos--------------------------------------- */
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+img{
+   
+    width: 200vh;
+    height:80vh;
+}
+
+
+.container-carrousel{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.slide-fotos{
+    display: flex;
+    /* Este es el efecto para hacer las animaciones */
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    /* el efecto alternate es para que arranque desde el principio hasta al final y luego desde el final hasta el principio */
+    animation-direction: alternate;
+    /* el efecto fowards sirve para que la animacion termine en el ultimo valor del keyframe */
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide-fotos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+/* pagination es la seccion que muestra las paginas o fotos  */
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* es el contorno de cada item */
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+/* es la imagen que esta dentro de cada pagination-item */
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* cuando se clickea alguna de los pagination-items detiene la animacion y para que vuelva la animacion automatica se requiere refrescar la pagina */
+/* Hay que resaltar que el traslate3d no esta relacionado con las fotos sino con el espacio de la caja, para relacionarlo se tendria que usar js */
+input[id="1"]:checked ~ .slide-fotos{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: white;
+}
+
+input[id="2"]:checked ~ .slide-fotos{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+
+
+input[id="3"]:checked ~ .slide-fotos{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+}
+
+/* Esto es para que haga el slide de manera automatica */
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    
+    66%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    
+    100%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+.container-section{
+    display: grid;
+    grid-template-rows: repeat(3,5vh,1fr);
+}
+
+.container--subtitulo{
+    color: lightslategray;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(197, 190, 190, 0.5);
+}
+
+.container--subtitulo h3{
+    margin: 2vh;
+}
+
+.container--contenido{
+    color: rgb(82, 148, 102);
+}

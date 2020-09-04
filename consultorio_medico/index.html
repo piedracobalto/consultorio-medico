@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link navbar-nav rel="stylesheet" type="text/css" href="styles/style.css">
+        <meta charset="utf-8">
+        <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- meta tag para poner logo en internet y que sea compatible con android e IOS -->
+        <link navbar-nav rel="shortcut icon" sizes="128x128" href="">
+        <link navbar-nav rel="shortcut icon" sizes="196x196" href="">
+        <link navbar-nav rel="apple-touch-icon" href="">
+        <link navbar-nav rel="apple-touch-icon" sizes="76x76" href="">
+        <link navbar-nav rel="apple-touch-icon" sizes="120x120" href="">
+        <link navbar-nav rel="apple-touch-icon" sizes="152x152" href="">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- meta tag de bootstrap que sea responsive o adaptativa a cualquier pantalla -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link navbar-nav rel="stylesheet" href="sytles/normalize.css">
+        <link navbar-nav rel="stylesheet" href="sytles/style.css">
+        <link navbar-nav rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Consultorio Florencia Croce</title>
+    </head>
+    <body class="container">
+
+        <header class="container--navbar">
+            <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar--nav" href="#">FBC Consultorio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-config" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="navbar--nav" href="#atencion">Atención Médica</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navbar--nav" href="#cv">C.V.</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navbar--nav" href="#contacto">Contacto</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </nav>
+          </header>
+
+              <section>
+
+                <div class="container-carrousel">
+
+                    <!-- Los inputs serian los paginations para seleccionar las fotos
+                     El hidden es para ocultar los ratio no clikeados -->
+                  <input type="radio" id="1" name="image-slide" hidden/>
+                  <input type="radio" id="2" name="image-slide" hidden/>
+                  <input type="radio" id="3" name="image-slide" hidden/>
+          
+                  <div class="slide-fotos">
+          
+                      <div class="item-slide-fotos">
+                          <img src="images/endocrino1.jpg">
+                      </div>
+          
+                      <div class="item-slide-fotos">
+                          <img src="images/endocrino2.jpg">
+                      </div>
+          
+                      <div class="item-slide-fotos">
+                          <img src="images/endocrino3.jpg">
+                      </div>
+          
+                  </div>
+          
+                  <div class="pagination">
+                      <!-- Se hace un label para conectar el for con los inputs radio -->
+                      <label class="pagination-item" for="1">
+                          <img src="images/endocrino1.jpg">
+                      </label>
+                      
+                      <label class="pagination-item" for="2">
+                          <img src="images/endocrino2.jpg">
+                      </label>
+                      
+                      <label class="pagination-item" for="3">
+                          <img src="images/endocrino3.jpg">
+                      </label>
+                      
+                  </div>
+                  
+              </div>
+              
+
+              https://www.cemic.edu.ar/institucional.php
+              https://www.consultoriomediconline.com/p/medicos.html
+
+            <!-- <nav class="navbar-menu">
+                <a class="logo navbar-nav" href="#">FBC Consultorio</a>
+                <div class="navbar-opcion">
+                    <a class="navbar-nav" href="">Atención Médica</a>
+                    <a class="navbar-nav"href="">C.V.</a>
+                    <a class="navbar-nav"href="">Contacto</a>
+                    
+                </div>
+            </nav> -->
+        
+
+        
+           <div class="container-section">
+            <div class="container--subtitulo" id="atencion">
+              <h3>Atención Médica</h3>
+            </div>
+            <div class="container--contenido">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatem incidunt cum ea sit voluptate aut animi iusto asperiores quo minus omnis, sequi officia dignissimos neque temporibus saepe eligendi quibusdam?</p>
+            </div>
+            <div class="container--subtitulo" id="cv">
+              <h3>C.V.</h3>
+            </div>
+            <div class="container--contenido">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatem incidunt cum ea sit voluptate aut animi iusto asperiores quo minus omnis, sequi officia dignissimos neque temporibus saepe eligendi quibusdam? <br>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima quae possimus cum facilis illum ipsam voluptas quidem aut. Odit voluptas minima ratione omnis nam enim culpa blanditiis excepturi suscipit! Nisi! <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quasi quaerat illum, perferendis, est fugiat voluptatibus consectetur blanditiis obcaecati ipsum, in repellat minus expedita velit saepe id nemo excepturi quas. <br>
+              </p>
+            </div>
+            <div class="container--subtitulo" id="contacto">
+              <h3>Contacto</h3>
+            </div>
+            <div class="container--contenido">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatem incidunt cum ea sit voluptate aut animi iusto asperiores quo minus omnis, sequi officia dignissimos neque temporibus saepe eligendi quibusdam?</p>
+            </div>
+          </section>
+          
+        
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>
